@@ -37,5 +37,5 @@ Project catalogue：
    #### 2.3 pages
    #### 2.4 utils
 
-### Docs
+## Docs
 See [Development Docs](https://developers.weixin.qq.com/miniprogram/dev/framework/).
