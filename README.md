@@ -23,15 +23,15 @@ See [Download URL](https://developers.weixin.qq.com/miniprogram/dev/devtools/dow
 
 ## Project manager
 Project catalogue：
-   1. core files of the project
-   app.js, app.json and app.wxss are the entry of the application.
-   2. cloudfunctions
+1. core files of the project
+    app.js, app.json and app.wxss are the entry of the application.
+2. cloudfunctions
     * callback
     * echo
     * imgSecCheck
     * login
     * openapi
-   3. miniprogram
+3. miniprogram
     * assets
     * components
     * pages
