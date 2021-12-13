@@ -1,0 +1,34 @@
+<!--input.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <btn-top></btn-top>
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+    
+    <image class="tip-icon" src="../../assets/images/input/tip-icon.png" mode="widthFix"></image>
+
+    <view class="tip-text">美好的祝福要一起分享</view>
+
+    <input class="input" placeholder="（你现在想的那个Ta）" maxlength="8" bindinput="inputName" />
+
+    <view class="tip-text2">不要超过8个字符</view>
+
+    <view class="op-content" style="bottom: {{isBigPhone ? '30%' : '25%'}};">
+      <view class="btn-ignore"
+        style="background-image: url('{{btnRedBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 47%; height: 80rpx; font-size: 32rpx; padding-top: 22rpx; color: #e4b967;"
+        bindtap="onBtnIgnore">
+        跳过
+      </view>
+      <view class="btn-share"
+        style="background-image: url('{{btnGoldBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 47%; height: 80rpx; font-size: 32rpx; padding-top: 22rpx; color: #CE0B14;"
+        bindtap="onBtnShare">
+        分享
+      </view>
+    </view>
+
+    <button class="btn-userinfo-ignore" open-type="share" bindtap="onBtnIgnore" style="bottom: {{isBigPhone ? '30%' : '25%'}};"></button>
+    <button class="btn-userinfo-share" open-type="share" bindtap="onBtnShare" style="bottom: {{isBigPhone ? '30%' : '25%'}};"></button>
+
+    <image class="logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+  </view>
+</main-content>

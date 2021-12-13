@@ -1,0 +1,23 @@
+<!--stickers.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <btn-top></btn-top>
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+
+    <view class="tip-text1" style="margin-top: {{isBigPhone ? '5%' : '15%'}};">长按图片</view>
+    <view class="tip-text2">六六大顺 收入囊中</view>
+    <view class="download-tip" style="opacity: {{isDownload ? 1 : 0}}; background-image: url('{{downloadBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+      {{downloadTip}}
+    </view>
+
+    <view class="stick-content" style="height: {{isBigPhone ? '52%' : '56%'}};">
+      <view class="stick-list" style="margin-top: {{isBigPhone ? '11%' : '4%'}};">
+        <image wx:if="{{index%2 == 0}}" class="stick-item" src="{{stickList[index]}}" wx:for="{{stickList}}"
+          mode="widthFix" data-url="{{stickList[index]}}" bindlongpress="onLongPressDownload" style="margin-top: {{isBigPhone ? '20%' : '10%'}};"></image>
+        <image wx:if="{{index%2 != 0}}" class="stick-item" src="{{stickList[index]}}" wx:for="{{stickList}}"
+          mode="widthFix" data-url="{{stickList[index]}}" bindlongpress="onLongPressDownload" style="margin-top: {{isBigPhone ? '20%' : '10%'}};"></image>
+      </view>
+    </view>
+  </view>
+</main-content>

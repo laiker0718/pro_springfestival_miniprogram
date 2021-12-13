@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content">
+    <video class="video-background" src="{{videoUrl}}" controls="{{false}}" autoplay="true" loop="true" object-fit="fill"></video>
+
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+
+    <image class="btn-start-content" src="../../assets/images/btn-start.gif" mode="widthFix" bindtap="onBtnGo"></image>
+
+    <view class="btn-download-area"  style="background: url('{{btnRedBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 29%; height: 60rpx; font-size: 26rpx; text-align: center; padding-top: 14rpx; color: #e4b967;" bindtap="onBtnDownload">下载贴纸</view>
+  </view>
+</main-content>

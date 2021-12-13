@@ -1,0 +1,30 @@
+<!--download.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <btn-top></btn-top>
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+
+    <view class="op-content">
+      <view class="op-item" bindtap="onBtnDownload">
+        <image src="../../assets/images/btn-download.png" mode="widthFix"></image>
+        <view>下载视频</view>
+      </view>
+      <view class="op-item" bindtap="onBtnDownloadStickers">
+        <image src="../../assets/images/btn-download-stickers.png" mode="widthFix"></image>
+        <view>下载贴纸</view>
+      </view>
+    </view>
+
+    <view class="op-item op-ec-btn" bindtap="onBtnEc" style="background-image: url('{{ecBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+      <view class="ec-text">立刻探索</view>
+      <view class="ec-text">春节胶囊系列限时店</view>
+    </view>
+
+    <view class="download-tip" hidden="{{!isDownload}}">
+      {{downloadTip}}
+    </view>
+
+    <image class="logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+  </view>
+</main-content>

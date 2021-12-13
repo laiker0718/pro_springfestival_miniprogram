@@ -1,0 +1,8 @@
+/* components/btn-top/btn-top.wxss */
+.btn-music {
+  position: fixed;
+  width: 40px;
+}
+.img-music {
+  width: 40px;
+}

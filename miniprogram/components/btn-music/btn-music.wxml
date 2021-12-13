@@ -1,0 +1,5 @@
+<!--components/btn-top/btn-top.wxml-->
+<view class="btn-music" style="top: {{btnTop}}px; right: {{btnRight}}px;">
+   <image class="img-music" src="{{btnSrc}}" bindtap="onBtnMusic" style="top: {{btnTop}}px; right: {{btnRight}}px;" mode="widthFix">
+   </image>
+</view>

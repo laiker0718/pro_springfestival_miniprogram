@@ -1,0 +1,18 @@
+{
+  "name": "SpringFestival",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.notionbase.com/clients/pro_dg_springfestival_sapp.git"
+  },
+  "author": "Evan",
+  "license": "ISC",
+  "dependencies": {
+    
+  }
+}

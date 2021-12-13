@@ -1,0 +1,36 @@
+<!--prepare.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content" style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <btn-top></btn-top>
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+    
+    <view class="prepare-tip-text1" style="margin-top: {{isBigPhone ? '20%' : '7%'}};">新春贺卡三连拍</view>
+    <view class="prepare-tip-text2">开始拍摄 专属祝福</view>
+
+    <image class="btn-begin" src="../../assets/images/btn-photo.png" mode="widthFix" bindtap="onBtnCamera" style="margin-top: {{isBigPhone ? '2%' : '0%'}};"></image>
+
+    <view class="prepare-tip-text3" style="top: {{isBigPhone ? '83%' : '84%'}};">或</view>
+    <view class="btn-photograph" style="background-image: url('{{btnGoldBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 40%; height: 80rpx; font-size: 32rpx; text-align: center; padding-top: 22rpx; color: #57451B; top: {{isBigPhone ? '85%' : '86%'}};"
+      bindtap="onBtnPhoto">从相册上传</view>
+
+    <image class="dg-logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+  </view>
+  <view wx:if="{{!bReadRule}}" class="page-rule" style="background-image: url('{{ruleFrame}}'); background-repeat: no-repeat; background-size: 100% 100%; height: {{isBigPhone ? '52%' : '55%'}}; margin-top: {{isBigPhone ? '52%' : '44%'}}">
+    <view class="rule-back">
+      <view class="rule-title1">祝福不在多 有你就足够</view>
+      <view class="rule-imgs-tip">
+        <image class="img-tip1" src="../../assets/images/prepare/dos.png" mode="widthFix"></image>
+        <image class="img-tip2" src="../../assets/images/prepare/donts.png" mode="widthFix"></image>
+      </view>
+      <view class="rule-title2" style="top: {{isBigPhone ? '65%' : '70%'}};">拼出新年好气象</view>
+      <view class="rule-title3" style="top: {{isBigPhone ? '70%' : '75%'}};">为达最佳效果，建议最多</view>
+      <view class="rule-title4" style="top: {{isBigPhone ? '75%' : '80%'}};">自拍两个人的半身照</view>
+    </view>
+
+    <view class="btn-ok"
+      style="background-image: url('{{btnRedBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 22%; height: 60rpx; font-size: 26rpx; padding-top: 14rpx; padding-left: 88rpx; color: #e4b967;"
+      bindtap="onBtnOk">
+      好的
+    </view>
+  </view>
+</main-content>

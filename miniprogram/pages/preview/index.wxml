@@ -1,0 +1,46 @@
+<!--preview.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <view class="preview-tip-text" style="margin-top: {{isBigPhone ? '60%' : '42%'}};">是你的独家表情吗？</view>
+
+    <view class="preview-images-content">
+      <swiper class="swiper-list" circular="true" previous-margin="{{leftMarginOfSwiper}}px"
+        next-margin="{{rightMarginOfSwiper}}px" current="{{currentIndex}}" bindchange="onSwiperChange">
+        <block wx:for="{{photoSrc}}" wx:key="{{index}}">
+          <swiper-item class="swiper-item">
+            <view class="swiper-item-border {{currentIndex == index ? '' : 'unactive'}}"
+              style="background-image: url('{{previewBorder}}'); background-repeat: no-repeat; background-size: 100% 100%; height: {{currentIndex == index ? wHeight * 0.4 : wHeight * 0.4 * 0.8}}px; width: {{currentIndex == index ? wHeight * 0.4 * 9 / 16 : wHeight * 0.4 * 0.8 * 9 / 16}}px;">
+              <image class="itemImg" src="{{item}}" mode="heightFix"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <image class="preview-frame" src="../../assets/images/preview/frame.png" mode="scaleToFill"></image>
+
+      <view>
+        <image class="arrow-left" src="../../assets/images/btn-left.png" mode="widthFix" bindtap="onBtnLeft"></image>
+        <image class="arrow-right" src="../../assets/images/btn-right.png" mode="widthFix" bindtap="onBtnRight"></image>
+      </view>
+    </view>
+
+    <view class="preview-op-content">
+      <view class="btn-retake"
+        style="background-image: url('{{btnRedBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 47%; height: 80rpx; font-size: 32rpx; padding-top: 22rpx; color: #e4b967;"
+        bindtap="onBtnRetake">
+        重拍
+      </view>
+      <view class="btn-ok"
+        style="background-image: url('{{btnGoldBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 47%; height: 80rpx; font-size: 32rpx; padding-top: 22rpx; color: #CE0B14;"
+        bindtap="onBtnOk">
+        棒棒哒
+      </view>
+    </view>
+
+    <image class="preview-logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+
+    <btn-top style="z-index: 99;"></btn-top>
+    <btn-music style="z-index: 99;" isOn="{{isMusicOn}}"></btn-music>
+  </view>
+</main-content>

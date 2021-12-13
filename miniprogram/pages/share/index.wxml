@@ -1,0 +1,34 @@
+<!--result.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <video wx:if="{{!isFullScreen}}" class="result-video" id="result-video" src="{{videoUrl}}" controls="{{false}}" autoplay="{{true}}" loop="{{true}}" style="width: {{vWidth}}px;height:{{vWidth * 16 / 9}}px;"></video>
+
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+
+    <view class="tip-text1" style="margin-top: {{isBigPhone ? '48%' : '38%'}};">{{nameFrom}}</view>
+    <view class="tip-text2" style="margin-top: {{nameFrom  == ' ' ? '50rpx' : '0rpx'}};">{{nameFrom  != ' ' ? "" : "我"}}想对你说</view>
+
+    <view class="result-content"> </view>
+
+    <view class="result-op-content" style="width: {{isBigPhone ? '45%' : '40%'}}; margin-top: {{isBigPhone ? '10%' : '2%'}};">
+      <view class="op-item" bindtap="onBtnHome">
+        <image src="../../assets/images/btn-gohome.png" mode="widthFix"></image>
+        <view>我也要拼</view>
+      </view>
+      <view class="op-item" bindtap="onBtnDownload">
+        <image src="../../assets/images/btn-download-stickers.png" mode="widthFix"></image>
+        <view>下载贴纸</view>
+      </view>
+    </view>
+
+    <view class="op-item op-ec-btn" bindtap="onBtnEc" style="background-image: url('{{ecBack}}'); background-repeat: no-repeat; background-size: 100% 100%; margin-top: {{isBigPhone ? '5%' : '2%'}};">
+      <view class="ec-text">立刻探索</view>
+      <view class="ec-text">春节胶囊系列限时店</view>
+    </view>
+
+    <image class="result-logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+
+    <view class="result-video-cover" bindtap="onBtnFullScreen"> </view>
+  </view>
+  <video wx:if="{{isFullScreen}}" class="result-video-fullscreen" id="result-video-fullscreen" src="{{videoUrl}}" controls="{{false}}" autoplay="{{true}}" bindended="videoPlayEnded" bindtap="onBtnFullScreen"></video>
+</main-content>

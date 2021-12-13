@@ -1,0 +1,25 @@
+/* components/btn-top/btn-top.wxss */
+.btn-top {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  left: 30rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255 , 255, 255, 0.8);
+  border-radius: 30rpx;
+}
+.btn-back {
+  position: fixed;
+  width: 90rpx;
+  height: 70rpx;
+  left: 16rpx;
+  margin-top: -4rpx;
+}
+.btn-home {
+  position: fixed;
+  width: 90rpx;
+  height: 70rpx;
+  left: 120rpx;
+  margin-top: -4rpx;
+}

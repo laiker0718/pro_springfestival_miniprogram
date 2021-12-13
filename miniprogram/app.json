@@ -1,0 +1,31 @@
+{
+  "pages": [
+    
+    "pages/landing/index",
+    "pages/prepare/index",
+    "pages/photo/index",
+    "pages/photo7/index",
+    "pages/preview/index",
+    "pages/selectsticker/index",
+    "pages/create/index",
+    "pages/result/index",
+    "pages/input/index",
+    "pages/download/index",
+    "pages/stickers/index",
+    "pages/share/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents":{
+    "main-content": "components/main-content/main-content",
+    "btn-top": "components/btn-top/btn-top",
+    "btn-music": "components/btn-music/btn-music"
+  }
+}

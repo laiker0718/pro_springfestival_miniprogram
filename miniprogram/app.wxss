@@ -1,0 +1,10 @@
+@import './assets/css/animate.min.wxss';
+@import './assets/font/font.wxss';
+
+page{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'NotoSansCJKsc-Medium';
+  /* font-family: 'NotoSansCJKsc-Bold'; */
+}

@@ -1,0 +1,26 @@
+<!--photo.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content">
+    <camera class="scamera" device-position="{{isFront?'front':'back'}}" flash="off">
+    </camera>
+    
+    <image class="image-tip" src="{{photoSrc[nPhoto - 1]}}" style="width: {{cWidth}}px;height:{{cWidth * 16 / 9}}px;">
+    </image>
+
+    <btn-top></btn-top>
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+
+    <view class="photo-taken-tip-content">
+      <image class="photo-take-tip" src="{{urlTaken}}" mode="widthFix"></image>
+    </view>
+
+    <view class="btn-options" style="height:{{wHeight - wWidth * 16 / 9}}px;">
+      <image class="btn-photograph" src="../../assets/images/photo/btn-photograph.png" mode="widthFix"
+        bindtap="onBtnPhotograph"></image>
+      <image class="btn-start" src="../../assets/images/btn-photo.png" mode="widthFix" bindtap="startTakePhotos">
+      </image>
+      <image class="btn-switch" src="../../assets/images/photo/btn-switch.png" mode="widthFix" bindtap="switchCamera">
+      </image>
+    </view>
+  </view>
+</main-content>

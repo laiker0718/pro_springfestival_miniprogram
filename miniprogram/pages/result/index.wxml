@@ -1,0 +1,38 @@
+<!--result.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <video wx:if="{{!isFullScreen}}" class="result-video" id="result-video" src="{{videoUrl}}" controls="{{false}}" autoplay="{{true}}" loop="{{true}}" style="width: {{vWidth}}px;height:{{vWidth * 16 / 9}}px;"></video>
+
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <view class="result-tip-text" style="margin-top: {{isBigPhone ? '50%' : '40%'}}"> 乐拼成功！</view>
+
+    <view class="result-content" style="height: {{isBigPhone ? '40%' : '38%'}}"> </view>
+
+    <view class="result-op-content">
+      <view class="op-item" bindtap="onBtnShare">
+        <image src="../../assets/images/btn-share.png" mode="widthFix"></image>
+        <view>分享</view>
+      </view>
+      <view class="op-item" bindtap="onBtnDownload">
+        <image src="../../assets/images/btn-download.png" mode="widthFix"></image>
+        <view>下载视频</view>
+      </view>
+    </view>
+
+    <view class="op-ec-btn" bindtap="onBtnEc" style="background-image: url('{{ecBack}}'); background-repeat: no-repeat; background-size: 100% 100%; margin-top: {{isBigPhone ? '4%' : '2%'}};">
+      <view class="ec-text">立刻探索</view>
+      <view class="ec-text">春节胶囊系列限时店</view>
+    </view>
+
+    <image class="result-logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+
+    <view class="download-tip" hidden="{{!isDownload}}">
+      {{downloadTip}}
+    </view>
+
+    <view class="result-video-cover" bindtap="onBtnFullScreen"> </view>
+
+    <btn-top></btn-top>
+  </view>
+  <video wx:if="{{isFullScreen}}" class="result-video-fullscreen" id="result-video-fullscreen" src="{{videoUrl}}" controls="{{false}}" autoplay="{{true}}" bindended="videoPlayEnded" bindtap="onBtnFullScreen"></video>
+</main-content>

@@ -1,0 +1,20 @@
+<!--create.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content" style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <!-- <btn-top></btn-top> -->
+    <btn-music isOn="{{isMusicOn}}"></btn-music>
+
+    <image wx:if="{{!isError}}" class="create-tip-img" src="../../assets/images/graphic.png" mode="widthFix"></image>
+    <view wx:if="{{!isError}}" class="create-tip-text">牛力全开中...</view>
+
+    <image class="create-logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+  </view>
+  
+  <view wx:if="{{isError}}" class="toast">
+    <image class="toast-image" src="../../assets/images/toast-back.png" mode="widthFix"></image>
+    <view class="toast-content">{{errMsg}}</view>
+  </view>
+
+  <canvas type="2d" id="canvas2D" class="canvas" disable-scroll="true"
+      style="width: {{cWidth}}px; height: {{cHeight}}px; position: absolute; left: -10000rpx; top: -10000rpx;"></canvas>
+</main-content>

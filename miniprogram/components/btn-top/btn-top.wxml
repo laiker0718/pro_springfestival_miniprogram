@@ -1,0 +1,7 @@
+<!--components/btn-top/btn-top.wxml-->
+<view class="btn-top" style="top: {{btnTop}}px; width: {{width}}px; height: {{height}}px;">
+   <image src="../../assets/images/btn-back.png" class="btn-back" bindtap="onBtnBack" style="top: {{btnTop}}px">
+   </image>
+   <image src="../../assets/images/btn-home.png" class="btn-home" bindtap="onBtnHome" style="top: {{btnTop}}px">
+   </image>
+</view>

@@ -1,0 +1,49 @@
+/**stickers.wxss**/
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tip-text1 {
+  color: white;
+  font-size: 36rpx;
+}
+.tip-text2 {
+  color: white;
+  font-size: 36rpx;
+}
+.download-tip {
+  color: white;
+  font-size: 32rpx;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 115rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.stick-content{
+  width: 60%;
+  /* height: 50%; */
+  /* height: 54%; */
+  overflow: scroll;
+}
+.stick-list {
+  width: 100%;
+
+  display: flow-root;
+  column-count: 2;
+}
+.stick-item {
+  width: 100%;
+  /* margin-top: 20%; */
+  /* margin-top: 10%; */
+}

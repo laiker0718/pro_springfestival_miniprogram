@@ -1,0 +1,54 @@
+<!--selectsticker.wxml-->
+<main-content anim_type="fadeIn" anim_timing='500'>
+  <view class="page-content"
+    style="background-image: url('{{pageBack}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <view class="select-tip-content">
+      <view class="select-tip-text1" style="margin-top: {{isBigPhone ? '0%' : '8%'}};">六六大顺,</view>
+      <!-- <view class="select-tip-text2">哪句是你的祝福语？</view> -->
+      <view class="select-tip-text2">挑选新春祝福</view>
+
+      <!-- <image class="btn-start-content" src="../../assets/images/btn-luck.gif" mode="widthFix" bindtap="onBtnGo"></image> -->
+    </view>
+
+    <view wx:if="{{!isRotating}}" class="select-stickers-content" style="height: {{isBigPhone ? '27%' : '30%'}}; margin-top: {{isBigPhone ? '24%' : '25%'}};">
+      <swiper class="swiper-list" circular="true" previous-margin="{{leftMarginOfSwiper}}px"
+        next-margin="{{rightMarginOfSwiper}}px" current="{{currentIndex}}" bindchange="onSwiperChange">
+        <block wx:for="{{stickList}}" wx:key="{{index}}">
+          <swiper-item class="swiper-item">
+            <view class="swiper-item-border {{currentIndex == index ? '' : 'unactive'}}">
+              <image class="itemImg" src="{{item}}" mode="heightFix"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <canvas wx:if="{{isRotating}}" class="canvas" id="canvas" type="2d"
+      style="height: {{isBigPhone ? '27%' : '30%'}}; margin-top: {{isBigPhone ? '24%' : '25%'}};"></canvas>
+
+    <image class="select-frame" src="{{pageFrame}}" mode="scaleToFill"></image>
+
+    <image class="btn-start-content" src="../../assets/images/btn-luck.gif" mode="widthFix" bindtap="onBtnGo"></image>
+    <!-- <image class="btn-start-content" src="../../assets/images/btn-luck.gif" mode="widthFix" bindtap="onBtnGo" style="margin-top: {{isBigPhone ? '-40%' : '-32%'}};"></image> -->
+
+    <view>
+      <image class="arrow-left" src="../../assets/images/btn-left.png" mode="widthFix" bindtap="onBtnLeft"
+        style="left: {{isBigPhone ? '5%' : '8%'}}; top: {{isBigPhone ? '53%' : '58%'}};"></image>
+      <image class="arrow-right" src="../../assets/images/btn-right.png" mode="widthFix" bindtap="onBtnRight"
+        style="right: {{isBigPhone ? '5%' : '7%'}}; top: {{isBigPhone ? '53%' : '58%'}};"></image>
+    </view>
+
+    <view class="select-op-content" style="margin-top: {{isBigPhone ? '25%' : '18%'}};">
+      <view class="btn-confirm"
+        style="background-image: url('{{btnRedBack}}'); background-repeat: no-repeat; background-size: 100% 100%; width: 100%; height: 80rpx; font-size: 32rpx; padding-top: 24rpx; color: #e4b967;"
+        bindtap="onBtnConfirm">
+        确认
+      </view>
+    </view>
+
+    <image class="select-logo" src="../../assets/images/logo.png" mode="widthFix"></image>
+
+    <btn-top style="z-index: 99;"></btn-top>
+    <btn-music style="z-index: 99;" isOn="{{isMusicOn}}"></btn-music>
+  </view>
+</main-content>
