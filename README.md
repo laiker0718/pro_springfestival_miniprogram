@@ -12,7 +12,7 @@
 | Miniprogram  | Evan 
 | PHP		   | Lance
 
-### Download Wechat Tools for development
+### Download Wechat Tool for development
 [](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
 
 ### Docs
