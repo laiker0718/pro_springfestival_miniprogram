@@ -26,16 +26,16 @@ Project catalogue：
 ### 1. core files of the project
    app.js, app.json and app.wxss are the entry of the application.
 ### 2. cloudfunctions
-   #### 1.1 callback
-   #### 1.2 echo
-   #### 1.3 imgSecCheck
-   #### 1.4 login
-   #### 1.5 openapi
+   #### 2.1 callback
+   #### 2.2 echo
+   #### 2.3 imgSecCheck
+   #### 2.4 login
+   #### 2.5 openapi
 ### 3. miniprogram
-   #### 2.1 assets
-   #### 2.2 components
-   #### 2.3 pages
-   #### 2.4 utils
+   #### 3.1 assets
+   #### 3.2 components
+   #### 3.3 pages
+   #### 3.4 utils
 
 ## Docs
 See [Development Docs](https://developers.weixin.qq.com/miniprogram/dev/framework/).
