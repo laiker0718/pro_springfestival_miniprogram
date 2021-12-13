@@ -12,8 +12,8 @@
 | Miniprogram  | Evan 
 | PHP		   | Lance
 
-### Download Wechat Tool for development
-[](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+### Download Wechat Tools for development
+See [Download URL](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
 
 ### Docs
 See [Development Docs](https://developers.weixin.qq.com/miniprogram/dev/framework/).
